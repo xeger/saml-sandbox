@@ -1,0 +1,23 @@
+<h1>SAML Sandbox</h1>
+
+<h2>IdP Stuff</h2>
+
+<a href="/saml/idp/metadata.xml">Federation metadata</a> for Identity Provider.
+
+<h3>Perform SSO to Service Provider</h3>
+
+Paste a SAML response here and submit it to the test Service Provider.
+
+<form action="/saml/sp/acs" method="post">
+  <label for="saml_response">SAMLResponse</label>
+  <textarea id="saml_response" name="SAMLResponse"><%= @saml_response %></textarea>
+  <br/>
+  <label for="saml_relay_state">RelayState</label>
+  <input id="saml_relay_state" name="RelayState" value="<%= @saml_relay_state %>"/>
+  <br/>
+  <input type="submit">Perform IdP-iniated login</input>
+</form>
+
+<h2>SP Stuff</h2>
+
+<a href="/saml/sp/metadata.xml">Federation metadata</a> for Service Provider.
