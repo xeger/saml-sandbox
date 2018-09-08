@@ -1,0 +1,32 @@
+<h2>SAML SSO Succeeded</h2>
+
+<h3>Authentication Principal</h3>
+
+<dl>
+  <dt>Name ID</dt>
+  <dd><%= @saml_response.name_id %></dd>
+  <dt>Format </dt>
+  <dd><%= @saml_response.name_id_format.split(':').last.camelize %></dd>
+</dl>
+
+<h3>SAML Message</h3>
+
+<dl>
+  <dt>Destination</dt>
+  <dd><%= @saml_response.destination %></dd>
+  <dt>Session Index</dt>
+  <dd><%= @saml_response.sessionindex %></dd>
+  <dt>In Response To</dt>
+  <dd><%= @saml_response.in_response_to || 'Nothing' %></dd>
+  <dt>Timing Constraints</dt>
+  <dd><%= @saml_response.not_before %> - <%= @saml_response.not_on_or_after %></dd>
+</dl>
+
+<h3>Identity Provider</h3>
+
+<dl>
+  <dt>Issuer</dt>
+  <dd><%= @saml_response.issuers.first %></dd>
+  <dt>In Response To</dt>
+  <dd><%= @saml_response.issuers.first %></dd>
+</dl>

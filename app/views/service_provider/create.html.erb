@@ -1,0 +1,7 @@
+<%=
+  if @saml_response.is_valid?  
+    render 'valid'
+  else
+    render 'invalid'
+  end
+%>

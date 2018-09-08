@@ -1,0 +1,10 @@
+<h2>SAML SSO Failed</h2>
+
+<ul>
+<% @saml_response.errors.each do |e| %>
+  <li><%= e %></li>
+<% end %>
+<% if @saml_exception %>
+  <li><%= @saml_exception.message %></li>
+<% end %>
+</ul>
