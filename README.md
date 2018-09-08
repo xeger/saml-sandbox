@@ -1,27 +1,14 @@
-# README
+* Ruby version 2.3
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Configuration
 
-Things you may want to cover:
+No database required. You do need to pake some self-signed certificates in tmp; see Operator's Guide.
 
-* Ruby version
+# Developer's Guide
 
-* System dependencies
+IdP gem: https://github.com/saml-idp/saml_idp  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+SP gem: https://github.com/onelogin/ruby-saml
 
 # Operator's Guide
 
